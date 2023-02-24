@@ -15,10 +15,10 @@ const questions = [
     message: 'Add a description.'
   },
   {
-    type: 'confirm',
+    type: 'checkbox',
     name: 'tableOfContents',
     message: 'Do you want to add a table of contents?',
-    default: true
+    choices: ['Installation', 'Usage', 'License', 'Contribution Guideline', 'Tests'],
   },
   {
     type: 'input',
@@ -55,10 +55,18 @@ const questions = [
 
   inquirer.prompt(questions).then((data) => {
     
-    console.log(JSON.stringify(data, null, '  '))
-    
+    console.log(JSON.stringify(data, null, '  '));
+    const contents = ['- [Installation](#installation)', '- [Usage](#usage)', '- [License](#license)', '- [Contribution-Guideline](#contributing)', '- [Tests](#tests)'];
+    const [installation, usage, license, contribution, tests] = contents;
+
     const readmeText = `# ${data.title} \n
     \n ## Description \n\n ${data.description}\n
+    \n ## Table of Contents \n
+    \n ${installation}\n
+    \n ${usage}\n
+    \n ${license}\n
+    \n ${contribution}\n
+    \n ${tests}\n
     \n ## Installation \n\n ${data.installation}\n
     \n ## Usage \n\n ${data.usage}\n
     \n ## License \n\n ${data.license}\n

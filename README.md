@@ -14,6 +14,7 @@
  The repository for this project can be found in:
  https://github.com/FlorSing/readme-creator
  
+ Please note: The file created will be named as: 'READMEproj.md' so as not to overwrite the original README file for the project repository.
  
  The video link demo is:
  

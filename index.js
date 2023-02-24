@@ -46,14 +46,14 @@ const questions = [
   {
     type: 'input',
     name: 'questions',
-    message: 'Email for where to send questions.'
+    message: 'What is your GitHub ID?'
   },
   
 ];
 
   inquirer.prompt(questions).then((data) => {
     
-    console.log(JSON.stringify(data, null, '  '));
+    console.log('Generating README file...');
 
     //destructure items for table of contents:
     const contents = ['- [Installation](#installation)', '- [Usage](#usage)', '- [License](#license)', '- [Contributing](#contributing)', '- [Tests](#tests)'];
@@ -73,10 +73,11 @@ const questions = [
     \n ## License \n\n ${data.license}\n
     \n ## Contributing \n\n ${data.contributing}\n
     \n ## Tests \n\n ${data.tests}\n
-    \n ## Questions \n\n ${data.questions}\n\n`;
+    \n ## Questions \n
+    \n Please leave any comment or questions at: ${data.questions}\n\n`;
 
     //write readme file and then append the file with text variable created from above
-    fs.writeFile('README.md', '', (err) => err ? console.error(err) : console.log('README file created'));
-    fs.appendFile('README.md', readmeText, (err) => err ? console.error(err) : console.log('readme text appended'));
+    fs.writeFile('READMEproj.md', '', (err) => err ? console.error(err) : console.log('README file created'));
+    fs.appendFile('READMEproj.md', readmeText, (err) => err ? console.error(err) : console.log('README text appended'));
 
   });

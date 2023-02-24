@@ -7,7 +7,7 @@ const questions = [
   {
     type: 'input',
     name: 'title',
-    message: 'What is your project title?'
+    message: 'What is the title of your project?'
   },
   
   {
@@ -20,41 +20,30 @@ const questions = [
     type: 'confirm',
     name: 'tableOfContents',
     message: 'Do you want to add a table of contents?',
-    default: false
+    default: true
   },
   
-  {
-    type: 'checkbox',
-    name: 'languages',
-    message: 'What languages do you speak?',
-    choices: ['JavaScript', 'HTML', 'Python'],
-
-  },
-  {
-    type: 'list',
-    name: 'contact',
-    message: 'What is preferred method of communication?',
-    choices: ['email', 'phone', 'SMS'],
-  },
-
+  
 ];
 
-  inquirer.prompt(questions).then((answers) => {
+  inquirer.prompt(questions).then((data) => {
     
     console.log('\nnew readme file created:\n');
-    console.log(JSON.stringify(answers, null, '  '))
+    console.log(JSON.stringify(data, null, '  '))
   });
 
 
 // function to write README file
 function writeToFile(fileName, data) {
-  let filename = `${answers.name.toLowerCase().split(' ').join('')}.json`;
-    fs.writeFile(filename, JSON.stringify(answers, null, ' \t '),(err) =>
-      err? console.error(err) : console.log('readme file ready'));
+    fs.writeFile('description.txt', data.description,(err) =>
+      err? console.error(err) : console.log('description'));
 }
 
 // function to initialize program
 function init() {
+  generateMarkdown();
+  writeToFile();
+  
 
 }
 

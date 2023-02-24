@@ -3,7 +3,7 @@
     
  ## Description 
 
- dexcritpion
+ jfkldsa thjas eria; ndieools,.
 
     
  ## Table of Contents 
@@ -18,7 +18,7 @@
  - [License](#license)
 
     
- - [Contribution-Guideline](#contributing)
+ - [Contributing](#contributing)
 
     
  - [Tests](#tests)
@@ -26,30 +26,30 @@
     
  ## Installation 
 
- npm
+ jfdklas
 
     
  ## Usage 
 
- user
+ ejiow
 
     
  ## License 
 
- lic
+  m,z.
 
     
- ## How to Contribute 
+ ## Contributing 
 
- contrib
+ fjeiow
 
     
- ## Test Examples 
+ ## Tests 
 
- testpic
+ dkal
 
     
  ## Questions 
 
- fps@gps
+ ewio
 

@@ -57,31 +57,16 @@ const questions = [
     
     console.log(JSON.stringify(data, null, '  '))
     
-    let title = `# ${data.title} \n\n`;
-    let description=  `## Description \n\n ${data.description}`;
-    let installation=  `## Installation \n\n ${data.installation}`;
-    let usage=  `## Usage \n\n ${data.usage}`;
-    let license=  `## License \n\n ${data.license}`;
-    let contributing=  `## How to Contribute \n\n ${data.contributing}`;
-    let tests=  `## Test Examples \n\n ${data.test}`;
-    let questions=  `## Questions \n\n ${data.questions}`;
+    const readmeText = `# ${data.title} \n
+    \n ## Description \n\n ${data.description}\n
+    \n ## Installation \n\n ${data.installation}\n
+    \n ## Usage \n\n ${data.usage}\n
+    \n ## License \n\n ${data.license}\n
+    \n ## How to Contribute \n\n ${data.contributing}\n
+    \n ## Test Examples \n\n ${data.tests}\n
+    \n ## Questions \n\n ${data.questions}\n\n`;
 
-    fs.writeFile('README.md', '', (err) => err ? console.error(err) : console.log('README'));
+    fs.writeFile('README.md', '', (err) => err ? console.error(err) : console.log('README file created'));
 
-    fs.appendFile('README.md', title, (err) => err ? console.error(err) : console.log('title'));
-
-    fs.appendFile('README.md', description, (err) => err ? console.error(err) : console.log('description'));
-    
-    fs.appendFile('README.md', installation, (err) => err ? console.error(err) : console.log('installation'));
-
-    fs.appendFile('README.md', usage, (err) => err ? console.error(err) : console.log('usage'));
-
-    fs.appendFile('README.md', license, (err) => err ? console.error(err) : console.log('license'));
-
-    fs.appendFile('README.md', contributing, (err) => err ? console.error(err) : console.log('contributing'));
-
-    fs.appendFile('README.md', tests, (err) => err ? console.error(err) : console.log('tests'));
-
-    fs.appendFile('README.md', questions, (err) => err ? console.error(err) : console.log('questions'));
-
+    fs.appendFile('README.md', readmeText, (err) => err ? console.error(err) : console.log('readme text appended'));
     });

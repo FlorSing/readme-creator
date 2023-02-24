@@ -1,7 +1,5 @@
 const fs = require("fs");
-const path = require('path');
 const inquirer = require("inquirer");
-const generateMarkdown = require("./utils/generateMarkdown");
 
 const questions = [
   {
@@ -56,9 +54,12 @@ const questions = [
   inquirer.prompt(questions).then((data) => {
     
     console.log(JSON.stringify(data, null, '  '));
+
+    //destructure items for table of contents:
     const contents = ['- [Installation](#installation)', '- [Usage](#usage)', '- [License](#license)', '- [Contributing](#contributing)', '- [Tests](#tests)'];
     const [installation, usage, license, contributing, tests] = contents;
 
+    //text file to append to readme file == these are the text content of README file 
     const readmeText = `# ${data.title} \n
     \n ## Description \n\n ${data.description}\n
     \n ## Table of Contents \n
@@ -74,7 +75,8 @@ const questions = [
     \n ## Tests \n\n ${data.tests}\n
     \n ## Questions \n\n ${data.questions}\n\n`;
 
+    //write readme file and then append the file with text variable created from above
     fs.writeFile('README.md', '', (err) => err ? console.error(err) : console.log('README file created'));
-
     fs.appendFile('README.md', readmeText, (err) => err ? console.error(err) : console.log('readme text appended'));
-    });
+
+  });

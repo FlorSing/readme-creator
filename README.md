@@ -1,9 +1,9 @@
-# Titel 
+# READMe File Creator 
 
     
  ## Description 
 
- desscribe
+ Hi. This project dynamically generates a README.md file based on the user input from the CLI.
 
     
  ## Table of Contents 
@@ -26,30 +26,30 @@
     
  ## Installation 
 
- abc
+ The application requires the npm inquirer package.
 
     
  ## Usage 
 
- jkfdlas
+ The application will be invoked by using the following command:
 
     
  ## License 
 
- lic
+ This one uses MIT
 
     
  ## Contributing 
 
- guide
+ This application can be freely accessed from https://github.com/FlorSing/readme-creator
 
     
  ## Tests 
 
- fdjlkas
+ A sample CLI interface image is shown below as well as the GitHub README page.
 
     
  ## Questions 
 
- dfas
+ Please send queries to github: https://github.com/FlorSing email: fpsingcak@gmail.com
 

@@ -1,12 +1,12 @@
-# README creator 
+#  
 
     
- MIT License 
+ ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) 
 
     
  ## Description 
 
- description
+ 
 
     
  ## Table of Contents 
@@ -32,33 +32,33 @@
     
  ## Installation 
 
- npm
+ 
 
     
  ## Usage 
 
- node
+ 
 
     
  ## License 
 
- MIT License 
+ MIT License (https://choosealicense.com/licenses/mit/) 
 
     
  ## Contributing 
 
- github
+ 
 
     
  ## Tests 
 
- video
+ 
 
     
  ## Questions 
 
     
- Please leave any comment or questions at: flor
+ Please leave any comment or questions at: 
 
     
- You can also drop an email at: fps
+ You can also drop an email at: 

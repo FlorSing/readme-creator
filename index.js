@@ -63,29 +63,36 @@ const questions = [
 
     //license choice
 
-    // const licenseChoices = new Map([
-    //   ['Apache License 2.0',  '![License: Apache2.0](https://img.shields.io/badge/License-Apache%20License%202.0-red.svg)'],
-    //   ['BSD 3-Clause',  '![License: BSD-3 Clause](https://img.shields.io/badge/License-BSD3-green.svg)'],
-    //   ['GNU General Public License v3.0', '![License: GPLv3](https://img.shields.io/badge/License-GPLv3-blue.svg)'],
-    //   ['MIT License', '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)']
-    // ])
-    // ;
-    //   for (const [key, value] of licenseChoices) {
-    //     if (data.license==key){
-    //       console.log(value);
-    //     }
-    // };
+    if (badge == 'Apache License 2.0'){
+      badgeIcon = '![License: Apache2.0](https://img.shields.io/badge/License-Apache%20License%202.0-red.svg)'
+    } else if(badge == 'GNU General Public License v3.0'){
+      badgeIcon = '![License: GPLv3](https://img.shields.io/badge/License-GPLv3-blue.svg)'
+    } else if (badge == 'MIT License'){
+      badgeIcon = '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)'
+    } else if (badge == 'BSD 3-Clause'){
+      badgeIcon = '![License: BSD-3 Clause](https://img.shields.io/badge/License-BSD3-green.svg)'
+    } else 
+      badgeIcon = null
+      ; 
 
-  // const badge = value;
-
-  // console.log(badge);
+    if (badge == 'Apache License 2.0'){
+      licenseLink = 'Apache License 2.0 \n' + 'https://choosealicense.com/licenses/apache-2.0/' 
+    } else if(badge == 'GNU General Public License v3.0'){
+      licenseLink = 'GNU General Public License v3.0 ' + '(https://choosealicense.com/licenses/gpl-3.0/)' 
+    } else if (badge == 'MIT License'){
+      licenseLink = 'MIT License ' + '(https://choosealicense.com/licenses/mit/)'
+    } else if (badge == 'BSD 3-Clause'){
+      licenseLink = 'BSD 3-Clause '+ '(https://choosealicense.com/licenses/bsd-3-clause/)'
+    } else 
+      licenseLink = 'None'
+    ; 
     //destructure items for table of contents:
     const contents = ['- [Installation](#installation)', '- [Usage](#usage)', '- [License](#license)', '- [Contributing](#contributing)', '- [Tests](#tests)', '- [Questions](#questions)'];
     const [installation, usage, license, contributing, tests, questions] = contents;
 
     //text file to append to readme file == these are the text content of README file 
     const readmeText = `# ${data.title} \n
-    \n ${badge} \n
+    \n ${badgeIcon} \n
     \n ## Description \n\n ${data.description}\n
     \n ## Table of Contents \n
     \n ${installation}\n
@@ -96,7 +103,7 @@ const questions = [
     \n ${questions}\n
     \n ## Installation \n\n ${data.installation}\n
     \n ## Usage \n\n ${data.usage}\n
-    \n ## License \n\n ${data.license} \n
+    \n ## License \n\n ${licenseLink} \n
     \n ## Contributing \n\n ${data.contributing}\n
     \n ## Tests \n\n ${data.tests}\n
     \n ## Questions \n
@@ -112,16 +119,3 @@ const questions = [
 
 
 
-  // if (value == 'Apache License 2.0'){
-  //   badge = '![License: Apache2.0](https://img.shields.io/badge/License-Apache%20License%202.0-red.svg)'
-  //   link = 'https://choosealicense.com/licenses/apache-2.0/'
-  // } else if(value == 'GNU General Public License v3.0'){
-  //   badge = '![License: GPLv3](https://img.shields.io/badge/License-GPLv3-blue.svg)'
-  //   link = 'https://choosealicense.com/licenses/gpl-3.0/' 
-  // } else if (value == 'MIT License'){
-  //   badge = '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)'
-  //   link = 'https://choosealicense.com/licenses/mit/'
-  // } else if (value == 'BSD 3-Clause'){
-  //   badge = '![License: BSD-3 Clause](https://img.shields.io/badge/License-BSD3-green.svg)'
-  //   link = 'https://choosealicense.com/licenses/bsd-3-clause/'
-  // } else badge = null; 

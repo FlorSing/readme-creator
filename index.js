@@ -71,9 +71,9 @@ const questions = [
       badgeIcon = '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)'
     } else if (badge == 'BSD 3-Clause'){
       badgeIcon = '![License: BSD-3 Clause](https://img.shields.io/badge/License-BSD3-green.svg)'
-    } else 
-      badgeIcon = null
-      ; 
+     } else 
+     badgeIcon = ''
+     ; 
 
     if (badge == 'Apache License 2.0'){
       licenseLink = 'Apache License 2.0 \n' + 'https://choosealicense.com/licenses/apache-2.0/' 
@@ -83,7 +83,7 @@ const questions = [
       licenseLink = 'MIT License ' + '(https://choosealicense.com/licenses/mit/)'
     } else if (badge == 'BSD 3-Clause'){
       licenseLink = 'BSD 3-Clause '+ '(https://choosealicense.com/licenses/bsd-3-clause/)'
-    } else 
+     } else 
       licenseLink = 'None'
     ; 
     //destructure items for table of contents:
@@ -111,8 +111,8 @@ const questions = [
     \n You can also drop an email at: ${data.email}`;
 
     //write readme file and then append the file with text variable created from above
-    fs.writeFile('READMEproj.md', '', (err) => err ? console.error(err) : console.log('...README file created'));
-    fs.appendFile('READMEproj.md', readmeText, (err) => err ? console.error(err) : console.log('...README text appended'));
+    fs.writeFile('README.md', '', (err) => err ? console.error(err) : console.log('...README file created'));
+    fs.appendFile('README.md', readmeText, (err) => err ? console.error(err) : console.log('...README text appended'));
 
   });
 

@@ -17,6 +17,7 @@
  
  
  The video recording for the CLI interface demo is at:
+ https://github.com/FlorSing/readme-creator/blob/main/utils/readmeFileCreatorDemo.webm
 
 
  Thank you.

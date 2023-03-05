@@ -16,6 +16,7 @@
  https://github.com/FlorSing/readme-creator
 
  A sample of a generated README.md file as well as the link is below:
+ https://github.com/FlorSing/readme-creator/blob/main/dist/README.md
  
  
  The video recording for the CLI interface demo is at:

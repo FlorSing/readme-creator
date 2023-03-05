@@ -14,11 +14,12 @@
  
  The repository for this project can be found in:
  https://github.com/FlorSing/readme-creator
+
+ A sample of a generated README.md file as well as the link is below:
  
  
  The video recording for the CLI interface demo is at:
- https://github.com/FlorSing/readme-creator/blob/main/utils/readmeFileCreatorDemo.webm
-
+ https://github.com/FlorSing/readme-creator/blob/main/dist/Untitled_%20Mar%205%2C%202023%204_56%20PM.webm
 
  Thank you.
  

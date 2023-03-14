@@ -18,8 +18,11 @@
  A sample of a generated README.md file as well as the link is below:
  https://github.com/FlorSing/readme-creator/blob/main/dist/README.md
  
+ 
  Screenshot:
+ 
  ![Screenshot 2023-03-13 150800](https://user-images.githubusercontent.com/118206899/225060226-199aa142-99e4-43dd-9867-73f1961b8488.png)
+
 
  The video recording for the CLI interface demo is at:
  https://github.com/FlorSing/readme-creator/blob/main/dist/Untitled_%20Mar%205%2C%202023%204_56%20PM.webm
